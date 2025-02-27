@@ -1,0 +1,26 @@
+{% extends "layout/main.html.twig" %}
+{%block content%}
+    <div class="row">
+    <div class="col-6 offset-3">
+
+    <form method="POST" enctype="multipart/form-data">
+        <label  class="form-label">Imię</label>
+        <input  class="form-control" type="text" name="name" value="{{row.name}}">
+
+        <label class="form-label">Nazwisko</label>
+        <input  class="form-control" type="text" name="surname" value="{{row.surname}}">
+
+        <label class="form-label">Wiek</label>
+        <input  class="form-control" type="number" name="age" value="{{row.age}}">
+
+        <label class="form-label">Zdjecie</label>
+        <input  class="form-control" type="file" name="image">
+
+        <label class="form-label">Aktywny</label>
+        <input type="checkbox" name="isactive" {{row.isactive ?'checked':''}}>
+
+        <button class="btn btn-primary" type="submit">Zapisz</button>
+    </form>
+    </div>
+    </div>
+{%endblock%}

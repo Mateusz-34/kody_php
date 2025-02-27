@@ -1,0 +1,10 @@
+SESSION_ID: dhoruh4m163u134uc2dq0l1efh
+ZAWARTOŚĆ_NASZEJ_TABLICY_SESYJNEJ:
+Array
+(
+    [auth] => Array
+        (
+            [login] => dwadwa
+        )
+
+)

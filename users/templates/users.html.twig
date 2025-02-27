@@ -1,0 +1,32 @@
+{% extends "layout/main.html.twig" %}
+{%block content%}
+{%if message%}
+<div class = "alert alert-primary">
+    {{message}}
+</div>
+{%endif%}
+
+<table class="table table-striped table-hover table-bordered">
+<tr>
+    <th>Id</th>
+    <th>Imię</th>
+    <th>Nazwisko</th>
+    <th>Wiek</th>
+    <th>Aktywny</th>
+    <th>Opcje</th>
+</tr>
+{%for item in results%}
+    <tr>
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.surname}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.isactive}}</td>
+        <td>
+            <a class="btn btn-primary" href="user_edit.php?id={{item.id}}">Edytuj</a>
+            <a class="btn btn-danger" href="user_delete.php?id={{item.id}}">Usun</a>
+    </tr>
+{%endfor%}
+</table>
+<a class="btn btn-primary" href='user_add.php'>Dodaj</a>
+{%endblock%}
